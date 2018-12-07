@@ -15,7 +15,7 @@ public class StudentIDs {
 
         System.out.println("Enter your students (or ENTER to finish: ");
 
-        // Get student names and grades
+        // Get student names and IDs
         do {
 
             System.out.println("Student: ");
@@ -24,6 +24,7 @@ public class StudentIDs {
             if (!newStudent.equals("")) {
                 System.out.println("ID #: ");
                 newID = in.nextInt();
+                // Key should be ID numbers (int), values should be names (string)
                 students.put(newID, newStudent);
 
                 // Read in the newline before looping back
@@ -31,17 +32,12 @@ public class StudentIDs {
             }
         } while(!newStudent.equals(""));
 
-        // Print class roster
+        // Modify the roster printing code accordingly.
         System.out.println("\nClass roster:");
 
         for (Map.Entry<Integer, String> student : students.entrySet()) {
             System.out.println(student.getKey() + ": " + student.getValue() + ".");
         }
-        // Similar to "Gradebook" but takes student names (string) and ID numbers (int)
-
-        // Key should be ID numbers (int), values should be names (string)
-
-        // Modify the roster printing code accordingly.
-
+        
     }
 }
