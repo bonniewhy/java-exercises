@@ -13,7 +13,7 @@ public class StudentIDs {
         Integer newID;
         String newStudent;
 
-        System.out.println("Enter your students (or ENTER to finish: ");
+        System.out.println("Enter your students (or ENTER to finish): ");
 
         // Get student names and IDs
         do {
