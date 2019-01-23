@@ -24,9 +24,9 @@ public class Area {
 
         } while (validRadius == 0);
 
-        // BONUS: Add validation. If user enters negative number, print an error message and quit.
+        // [X] BONUS: Add validation. If user enters negative number, print an error message and quit.
 
-        // BONUS: Extend by doing a while or do-while loop so that when the user enters a negative number they are re-prompted.
+        // [X] BONUS: Extend by doing a while or do-while loop so that when the user enters a negative number they are re-prompted.
 
     }
 }

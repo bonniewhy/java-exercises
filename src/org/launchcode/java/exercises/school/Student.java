@@ -24,6 +24,7 @@ public class Student {
         nextStudentId++;
     }
 
+    // Getters
     public String getName() {
         return name;
     }
@@ -40,7 +41,9 @@ public class Student {
         return gpa;
     }
 
-    public void setName(String aName) {
+    // Setters
+
+    void setName(String aName) {
         name = aName;
     }
 
