@@ -43,7 +43,7 @@ public class Student {
 
     // Setters
 
-    void setName(String aName) {
+    public void setName(String aName) {
         name = aName;
     }
 
@@ -54,4 +54,53 @@ public class Student {
     public void setGpa(double nextGpa) {
         gpa = nextGpa;
     }
+
+    // Instances
+
+    public void addGrade(int courseCredits, double grade) {
+
+        double existingQualityScore = gpa * numberOfCredits;
+        int newNumberOfCredits = numberOfCredits + courseCredits;
+        double newQualityScore = courseCredits * grade;
+        gpa = (existingQualityScore + newQualityScore) / newNumberOfCredits;
+        numberOfCredits = newNumberOfCredits;
+
+    }
+
+    public String getGradeLevel() {
+
+        if (numberOfCredits <= 29) {
+            return "Freshman";
+        } else if (numberOfCredits <= 59) {
+            return "Sohphomore";
+        } else if (numberOfCredits <= 89) {
+            return "Junior";
+        } else if (numberOfCredits <= 90) {
+            return "Senior";
+        }
+
+    }
+
+    // Special Methods
+    @Override
+    public String toString() {
+        return name + " (" + getGradeLevel() + ", GPA: " + gpa + ")";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+
+        if (o == null) {
+            return false;
+        }
+
+        if (o.getClass() != getClass()) {
+            return false;
+        }
+
+        Student theStudent = (Student) o;
+        return theStudent.getStudentId() == getStudentId();
 }
